@@ -57,6 +57,8 @@ The repository is organized as follows:
    To access the Dashboard, you may need to start a proxy server:
 
    ```bash
+   kubectl get sercret admin-user -n kubernetes-dashboard -o jsonpath={".data.token"} | base64 -d
+   # remove "%" character in the end
    kubectl proxy
    ```
 
