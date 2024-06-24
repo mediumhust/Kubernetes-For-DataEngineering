@@ -73,6 +73,8 @@ The repository is organized as follows:
    ```bash
    helm repo add apache-airflow https://airflow.apache.org
    helm install airflow apache-airflow/airflow -f k8s/values.yaml
+
+   port-forward svc/air-webserver 8080:8080 --namespace airflow
    ```
 
    This will deploy Airflow with the settings defined in `values.yaml`.
